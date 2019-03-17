@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SEMrush task 6</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="col col-sm-8" >
+			<div class="row f_s" v-for="(field,i) in fields">
+				<select class="form-control col-sm-3" v-model="field.type" v-on:change="resetToDefault(i,field.type)">
+					<option  v-for="(elem,key) in data_fields.selectType" :value="key">{{elem.label}}</option>
+				</select>
+				<select class="form-control col-sm-3" v-model="field.operation">
+					<option  v-for="(elem,key) in data_fields.selectOperation[field.type]"  :value="key">{{elem.label}}</option>
+				</select>
+				<input class="col-sm-4 form-control"  :type="field.type" v-model="field.value">
+				<div class="close col-sm-1 " @click="removeField(i)" v-if="fields.length>1"></div>
+			</div>
+		</div>
+		<button type="button" class="btn p-2" @click="addField">+ Add condition</button>
+		<hr>
+		<button type="button" class="btn btn-primary p-2" @click="showResult">Apply</button>
+		<button type="button" class="btn p-2 btn-light" @click="resetFields">Clear filter</button>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

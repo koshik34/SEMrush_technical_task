@@ -1,0 +1,28 @@
+.col.col-sm-8
+{
+	margin: 10px 0px;
+}
+.row.f_s
+{
+	flex-direction: row;
+	justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem!important;
+    
+}
+.row.f_s>*
+{
+	flex:1 0 auto;
+	margin-right: 5px;
+}
+.close
+{
+    height: 15px;
+    width: 15px;
+    background-image: url(../img/close.svg);
+    background-position: 50% 50%;
+    background-size: auto 100%;
+    cursor: pointer;
+    background-repeat: no-repeat;
+
+}
