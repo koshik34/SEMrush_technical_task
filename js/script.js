@@ -1,5 +1,5 @@
 new Vue({
-	el:'.container',
+	el:'#main',
 	data:{
 		fields:[],
 		data_fields:{

@@ -7,7 +7,7 @@
 	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-	<div class="container">
+	<div class="container " v-cloak id="main">
 		<div class="col col-sm-8" >
 			<div class="row f_s" v-for="(field,i) in fields">
 				<select class="form-control col-sm-3" v-model="field.type" v-on:change="resetToDefault(i,field.type)">
