@@ -1,4 +1,3 @@
-var result={number:[],text:[]};
 new Vue({
 	el:'.container',
 	data:{
@@ -59,7 +58,7 @@ new Vue({
 		},
 		showResult()
 		{
-			result={number:[],text:[]};
+			var result={number:[],text:[]};
 			this.fields.forEach(elem=>
 			{
 				result[elem.type].push({operation:elem.operation.replace('_',' '),value:elem.value});

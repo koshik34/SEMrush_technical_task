@@ -12,7 +12,6 @@
 }
 .row.f_s>*
 {
-	flex:1 0 auto;
 	margin-right: 5px;
 }
 .close
